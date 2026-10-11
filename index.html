@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Mano 💜</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background:
+    radial-gradient(ellipse at top, #512477 0%, transparent 55%),
+    linear-gradient(145deg, #10041B, #230B3A, #12051F);
+  color: #F3E8FF;
+  text-align: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+header {
+  padding: 28px 16px 12px;
+}
+
+header h2 {
+  color: #E9D5FF;
+  font-size: clamp(22px, 5vw, 30px);
+  text-shadow: 0 0 18px #A855F7;
+}
+
+header p {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #D8B4FE;
+}
+
+main {
+  width: 100%;
+  max-width: 760px;
+  margin: auto;
+  padding: 16px;
+}
+
+.page {
+  display: none;
+  min-height: 62vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  animation: appear 0.5s ease;
+}
+
+.page.active {
+  display: flex;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  color: #E5C4FF;
+  font-size: clamp(27px, 6vw, 46px);
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+  text-shadow: 0 0 20px rgba(192,132,252,0.3);
+}
+
+.cake {
+  font-size: clamp(60px, 15vw, 85px);
+  animation: heartbeat 1.8s infinite;
+  filter: drop-shadow(0 0 15px rgba(192,132,252,0.3));
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
+.card {
+  width: 100%;
+  padding: clamp(20px, 5vw, 32px);
+  background: rgba(48,20,70,0.82);
+  border: 1px solid rgba(216,180,254,0.45);
+  border-radius: 24px;
+  box-shadow:
+    0 8px 35px rgba(0,0,0,0.3),
+    0 0 22px rgba(168,85,247,0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.card p {
+  font-size: clamp(16px, 4vw, 20px);
+  line-height: 1.9;
+  color: #F3E8FF;
+  overflow-wrap: anywhere;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 24px auto 12px;
+  width: 100%;
+}
+
+button {
+  background: linear-gradient(135deg,#A855F7,#7E22CE);
+  color: white;
+  border: 1px solid rgba(233,213,255,0.3);
+  padding: 14px 22px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.25s, box-shadow 0.25s;
+  box-shadow: 0 4px 15px rgba(147,51,234,0.25);
+  max-width: 100%;
+  touch-action: manipulation;
+}
+
+button:hover {
+  background: linear-gradient(135deg,#C084FC,#9333EA);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(168,85,247,0.4);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+button:focus-visible {
+  outline: 2px solid #E9D5FF;
+  outline-offset: 4px;
+}
+
+#count {
+  font-size: 14px;
+  margin: 20px 0;
+  font-weight: bold;
+  color: #D8B4FE;
+}
+
+.hearts {
+  color: #C084FC;
+  font-size: 20px;
+  letter-spacing: 6px;
+  padding: 10px 0;
+  text-shadow: 0 0 12px #A855F7;
+}
+
+footer {
+  padding: 24px 16px;
+  font-size: 13px;
+  line-height: 1.8;
+  color: #CDB4E8;
+}
+
+/* Mobile responsive */
+@media (max-width: 480px) {
+  header {
+    padding-top: 24px;
+  }
+
+  main {
+    padding: 12px;
+  }
+
+  .page {
+    min-height: 60vh;
+    gap: 18px;
+  }
+
+  .card {
+    padding: 22px 17px;
+    border-radius: 20px;
+  }
+
+  .card p {
+    font-size: 16px;
+    line-height: 1.85;
+  }
+
+  .buttons {
+    gap: 10px;
+  }
+
+  .buttons button {
+    flex: 1 1 125px;
+    padding: 14px 12px;
+    font-size: 14px;
+  }
+
+  .page > button {
+    padding: 14px 20px;
+  }
+
+  #count {
+    margin: 18px 0;
+  }
+
+  footer {
+    padding-bottom: 28px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h2>💜 Mano's Birthday 💜</h2>
+  <p>A special surprise made with endless love</p>
+</header>
+
+<main>
+  <div id="pages"></div>
+
+  <div class="buttons">
+    <button onclick="changePage(-1)">← Previous</button>
+    <button onclick="changePage(1)">Next →</button>
+  </div>
+
+  <p id="count">Page 1 of 15 💜</p>
+  <div class="hearts">♡ ♥ ♡ ♥ ♡</div>
+</main>
+
+<footer>
+  Made with love, especially for my beautiful Mano 💜
+</footer>
+
+<script>
+const pages = [
+{
+title:"Happy Birthday, Mano!",
+emoji:"🎂",
+text:`Meri jaan Mano, aaj ka din meri zindagi ke sabse khoobsurat dinon mein se ek hai, kyunki aaj meri favourite person ka birthday hai. 💜 Tum meri zindagi ki woh khushi ho jise main lafzon mein kabhi poori tarah bayan nahi kar sakta. Tumhari ek chhoti si smile mere chehre par hazaar muskurahatein le aati hai. Main Allah se dua karta hoon ke tumhari zindagi ka har din khushiyon, pyaar aur sukoon se bhara rahe. Tumhare dil mein jo bhi khoobsurat khwab hain, Allah un sab ko haqeeqat bana de. Tum hamesha isi tarah hansti, muskurati aur apni pyari si duniya mein chamakti raho. Happy Birthday, meri jaan Mano, tum mere liye bohat zyada special ho! 🎂💜`,
+button:"Open Your Surprise 💌"
+},
+{
+title:"My Beautiful Girl",
+emoji:"🌷",
+text:`Mano, tumhari khoobsurati sirf tumhare chehre mein nahi, balki tumhare dil, tumhari baaton aur tumhari pyari si personality mein bhi hai. 🌷 Jab tum muskurati ho to aisa lagta hai jaise mere din ki saari thakan ek pal mein khatam ho gayi ho. Tumhari chhoti chhoti baatein bhi mere liye bohat badi khushi ban jaati hain. Main chahta hoon ke tum kabhi apni value par doubt na karo, kyunki tum apne aap mein bohat special ho. Tumhein hamesha aise log milen jo tumhari izzat karein, tumhari feelings samjhein aur tumhari khushi ki qadar karein. Tumhari aankhon mein hamesha umeed aur tumhare chehre par hamesha muskurahat rahe. Meri beautiful girl, tum hamesha khush rehna, kyunki tumhari khushi bohat pyari hai! 💜🌸`
+},
+{
+title:"A Special Birthday Wish",
+emoji:"🎁",
+text:`Meri pyari Mano, aaj tumhare birthday par meri sabse dil se nikli hui wish yahi hai ke tumhari zindagi ka har naya din tumhare liye ek khoobsurat tohfa lekar aaye. 🎁 Allah tumhein sehat, sukoon, izzat, kamyabi aur bepanah khushiyan ata kare. Tum jitni mehnat karti ho, tumhein usse bhi zyada achhe results aur success mile. Tumhari har pareshani asaani mein badal jaye aur tumhara har aansu khushi ki muskurahat ban jaye. Jab bhi tum kisi mushkil ka saamna karo, tumhare andar usse paar karne ki himmat aur hausla rahe. Tumhare aas paas hamesha sachche aur caring log hon jo tumhein dil se samjhein. Happy Birthday, Mano, meri dua hai ke tumhari poori zindagi tumhare birthday ki tarah beautiful ho! 💕✨`
+},
+{
+title:"You Are My Sunshine",
+emoji:"☀️",
+text:`Mano, agar meri zindagi ko ek khoobsurat kahani kaha jaye to tum us kahani ka sabse pyara hissa ho. ☀️ Tumhari presence mere aam se din ko bhi special bana deti hai aur tumhari smile mere mood ko ek pal mein achha kar sakti hai. Tum woh sunshine ho jo udaas se din mein bhi umeed ki roshni le aati hai. Main chahta hoon ke tumhari zindagi se har woh cheez door rahe jo tumhare dil ko takleef deti hai. Tumhare sapne hamesha zinda rahen aur tumhein unhein poora karne ke bohat saare mauqe milen. Tum jab bhi aage barho, tumhein apni mehnat aur apni abilities par fakhar mehsoos ho. Meri sunshine, duniya chahe jitni bhi busy ho jaye, tum apni pyari si smile kabhi mat khona! 💜☀️`
+},
+{
+title:"Why You Are So Special",
+emoji:"💗",
+text:`Pata hai Mano, tumhari sabse pyari baat yeh hai ke tum apni chhoti chhoti baaton se bhi kisi ka din beautiful bana sakti ho. 💗 Tumhari smile, tumhari cute si baatein, tumhara caring nature aur tumhara apna andaaz tumhein sabse alag banata hai. Tumhari har woh baat jo tumhein tum banati hai, mere liye bohat special hai. Main chahta hoon ke tumhein kabhi apni goodness ko chhupane ki zaroorat mehsoos na ho. Tum apne dil ki achhai, apni kindness aur apni beautiful personality ko hamesha sambhal kar rakhna. Tumhein aisa pyaar aur respect mile jo sirf lafzon mein nahi, balki actions mein bhi nazar aaye. Mano, tum kisi comparison ki mohtaj nahi ho, tum apni jagah khud ek bohat khoobsurat insaan ho! 💕🌷`
+},
+{
+title:"My Birthday Princess",
+emoji:"👑",
+text:`Aaj meri birthday princess ka special day hai aur meri wish hai ke aaj tumhari har chhoti se chhoti khwahish bhi poori ho. 👑 Tum apne aap ko duniya ki sabse lucky aur loved girl mehsoos karo, kyunki tum bohat saari khushiyan deserve karti ho. Tumhare liye har taraf se pyaar, beautiful surprises aur pyari pyari wishes aayen. Tumhara birthday cake tumhari smile jitna sweet ho aur tumhara poora din tumhari favourite memories se bhar jaye. Tum apni life mein hamesha confidence ke saath aage barhti raho aur kisi ko apne dreams chhote karne na do. Tumhari mehnat tumhein un heights tak le jaye jahan pahunchne ka tumne khwab dekha hai. Happy Birthday, my princess Mano, aaj ka poora din sirf tumhari khushiyon ke naam! 👑💜`
+},
+{
+title:"A Little Love Letter",
+emoji:"💌",
+text:`Dear Mano, agar main tumhein apne dil ki har baat likhne baithun to shayad ek poori kitaab bhi mere emotions ko bayan karne ke liye kam par jaye. 💌 Tum mere liye sirf ek special person nahi, balki woh insaan ho jiske liye main dil se achhi cheezein wish karta hoon. Main chahta hoon ke tumhari feelings ko hamesha samjha jaye aur tumhari baaton ko importance di jaye. Tum jab khush ho to tumhari khushi aur bhi barhe aur jab udaas ho to tumhein sukoon dene wale log tumhare paas hon. Tumhein apni zindagi mein kabhi yeh mehsoos na ho ke tum akeli ho ya tumhari feelings matter nahi kartin. Tum respect, care, honesty aur sincere love deserve karti ho. Happy Birthday, Mano, meri taraf se tumhare liye bohat saara pyaar aur dil se nikli hui duaein! 💌💜`
+},
+{
+title:"Cake Time, Birthday Girl!",
+emoji:"🍰",
+text:`Chalo meri jaan Mano, ab birthday celebration ka sabse sweet moment aa gaya hai aur tumhare favourite cake ko imagine karne ka time hai. 🍰 Socho tumhare saamne ek beautiful cake rakha hai, jis par tumhara naam likha hai aur uske aas paas pyari si candles jal rahi hain. Ab apni aankhein band karo aur apne dil ki sabse beautiful wish maango. Dua karo ke tumhari zindagi mein hamesha khushiyan, success aur sukoon rahe. Ab ek deep breath lo, apni sabse pyari smile do aur candles blow karne ka imagine karo. Meri dua hai ke tumhari har birthday wish tumhari zindagi mein kisi na kisi khoobsurat tareeqe se poori ho. Happy Birthday, Mano, tumhari life hamesha cake se bhi zyada sweet aur beautiful rahe! 🎂💜`
+},
+{
+title:"A Biggest Hug for You",
+emoji:"🧸",
+text:`Mano, agar aaj main tumhare paas hota to sabse pehle tumhein birthday wish karta aur tumhare liye ek bohat pyara sa warm hug lekar aata. 🧸 Main tumhein batata ke tumhara special day mere liye kitni khushi lekar aaya hai aur tumhari smile mere liye kitni important hai. Kabhi kabhi kuch feelings ko explain karna mushkil hota hai, kyunki dil mein bohat kuch hota hai lekin lafz kam par jaate hain. Meri wish hai ke tum aaj apne aas paas ke har pyaar bhare gesture ko enjoy karo. Tumhein itni khushi mile ke tumhari aankhon mein sirf happy tears hon aur tumhara dil sukoon se bhar jaye. Door reh kar bhi meri taraf se tumhare liye bohat saari warm wishes aur virtual hugs hain. Happy Birthday, meri jaan Mano, sending you the biggest hug ever! 🤗💜`
+},
+{
+title:"Our Beautiful Memories",
+emoji:"📸",
+text:`Mano, zindagi ki sabse beautiful cheezon mein se ek khoobsurat memories hoti hain, jo waqt guzarne ke baad bhi dil ko smile de jaati hain. 📸 Tumhare saath judi har achhi baat aur har pyara moment ek special feeling lekar aata hai. Main chahta hoon ke tumhari life mein aise bohat saare moments aayen jinhein yaad karke tum hamesha khush ho jao. Har naya din tumhare liye ek nayi beautiful memory lekar aaye aur tumhare paas muskurane ki hazaar wajahen hon. Tumhari gallery tumhari favourite pictures se bhari ho aur tumhara dil achhi yaadon se. Aane wala har saal tumhein naye experiences, naye achievements aur naye reasons to smile de. Happy Birthday, Mano, may your life become a beautiful collection of unforgettable memories! 💜📸`
+},
+{
+title:"Keep Shining, My Star",
+emoji:"⭐",
+text:`Meri pyari Mano, tumhare andar bohat potential hai aur main chahta hoon ke tum apne dreams ke peeche poore confidence ke saath chalo. ⭐ Zindagi mein kabhi kabhi mushkilein zaroor aati hain, lekin woh tumhari worth ya tumhari abilities ko kam nahi kar detin. Agar koi din mushkil ho to apne aap ko thoda time dena aur yaad rakhna ke tum dobara shuru kar sakti ho. Tumhari mehnat, tumhara patience aur tumhara hausla tumhein bohat aage le ja sakta hai. Apni achievements par proud hona aur apni chhoti chhoti victories ko bhi celebrate karna. Kisi aur ki journey se apni journey compare mat karna, kyunki tumhara apna waqt aur apna raasta hai. Keep shining, Mano, aur duniya ko apni beautiful personality aur amazing talents dikhati rehna! ⭐💜`
+},
+{
+title:"My Prayer for You",
+emoji:"🤲",
+text:`Meri jaan Mano, tumhare birthday par main Allah se dil ki gehraiyon se dua karta hoon ke woh tumhein hamesha apni hifazat mein rakhe. 🤲 Allah tumhari zindagi ko sehat, barkat, sukoon, kamyabi aur khushiyon se bhar de. Tumhare dil mein jo pareshaniyan hain, Allah unhein asaaniyon mein badal de aur tumhein har mushkil ka saamna karne ki taqat de. Tumhari har achhi dua qabool ho aur tumhare naseeb mein woh sab likha ho jo tumhare liye behtareen hai. Allah tumhein buri nazar, gham aur har us cheez se mehfooz rakhe jo tumhare dil ko takleef de. Tumhare ghar mein hamesha khushiyan, mohabbat aur rehmat barasti rahe. Ameen sum Ameen, Happy Birthday, Mano, Allah tumhari zindagi ko hamesha khoobsurat banaye! 🤲💜`
+},
+{
+title:"A Thousand Smiles",
+emoji:"😊",
+text:`Mano, meri wish hai ke tumhari zindagi mein ek nahi balki hazaaron aisi wajahen hon jo tumhein dil se muskurane par majboor kar dein. 😊 Tumhari subah achhi khabar ke saath shuru ho aur tumhari raat sukoon aur gratitude ke saath khatam ho. Tumhare din mein itni happiness ho ke chhoti chhoti baatein bhi tumhare liye special ban jayein. Jab tum apne favourite songs suno, apni favourite cheezein karo aur apne favourite logon ke saath waqt guzaro, tumhara dil khushi se bhar jaye. Tumhein aise moments milen jo tumhari saari tension ko kuch waqt ke liye bhula dein. Tumhari smile kabhi kisi pareshani ke neeche dabne na paaye aur tumhara confidence hamesha barhta rahe. Happy Birthday, Mano, may your beautiful smile stay with you today, tomorrow and forever! 😊💕`
+},
+{
+title:"One Little Secret",
+emoji:"💝",
+text:`Mano, aaj main tumhein ek chhoti si baat batana chahta hoon jo mere dil mein tumhare liye bohat special jagah rakhti hai. 💝 Duniya mein gifts bohat saare hote hain, lekin kuch cheezein aisi hoti hain jinhein paise se khareeda nahi ja sakta. Tumhari genuine smile, tumhari khushi aur tumhara dil se muskurana unhi khoobsurat cheezon mein se hain. Main chahta hoon ke tum apni life mein hamesha aise moments experience karo jo tumhein andar se khush aur peaceful bana dein. Tumhare paas apne dreams poore karne ke mauqe hon aur tum apni pasand ki zindagi jee sako. Agar meri birthday wish tumhare chehre par ek extra smile bhi le aaye to mere liye yeh bohat pyari baat hogi. Aur mera little secret yahi hai, Mano, tumhari happiness mere liye duniya ke sabse beautiful gifts mein se ek hai! 💝💜`
+},
+{
+title:"Forever Special, Mano!",
+emoji:"💜",
+text:`Aur aakhir mein meri sabse pyari Mano, main tumhein ek baar phir dil ki gehraiyon se Happy Birthday kehna chahta hoon. 💜 Meri dua hai ke tumhara yeh naya saal tumhari life ka sabse beautiful aur memorable saal bane. Tumhein apne dreams poore karne ka confidence mile aur tumhari har achhi koshish ka khoobsurat result aaye. Tumhari life mein aise log hon jo tumhein samjhein, tumhari respect karein aur tumhari khushi mein dil se khush hon. Tum jab bhi apne birthday ki yeh wishes dobara parho to tumhare chehre par wahi pyari si smile aa jaye. Apna khayal rakhna, apni value samajhna aur apne dil ki goodness ko hamesha sambhal kar rakhna. Happy Birthday, meri jaan Mano, you are special, you deserve happiness, and I wish you endless love, peace and beautiful moments forever! 💕🎂`,
+button:"Start Again ↻"
+}
+];
+
+const container = document.getElementById("pages");
+
+pages.forEach((p, i) => {
+  const section = document.createElement("section");
+  section.className = "page" + (i === 0 ? " active" : "");
+
+  const emoji = document.createElement("div");
+  emoji.className = "cake";
+  emoji.textContent = p.emoji;
+
+  const title = document.createElement("h1");
+  title.textContent = p.title;
+
+  const card = document.createElement("div");
+  card.className = "card";
+
+  const paragraph = document.createElement("p");
+  paragraph.textContent = p.text;
+
+  card.appendChild(paragraph);
+  section.appendChild(emoji);
+  section.appendChild(title);
+  section.appendChild(card);
+
+  if (p.button) {
+    const button = document.createElement("button");
+    button.textContent = p.button;
+
+    button.onclick = () => {
+      if (i === pages.length - 1) {
+        goHome();
+      } else {
+        changePage(1);
+      }
+    };
+
+    section.appendChild(button);
+  }
+
+  container.appendChild(section);
+});
+
+let current = 0;
+const allPages = document.querySelectorAll(".page");
+
+function showPage() {
+  allPages.forEach((page, i) => {
+    page.classList.toggle("active", i === current);
+  });
+
+  document.getElementById("count").textContent =
+    `Page ${current + 1} of ${allPages.length} 💜`;
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+
+function changePage(step) {
+  current = (current + step + allPages.length) % allPages.length;
+  showPage();
+}
+
+function goHome() {
+  current = 0;
+  showPage();
+}
+</script>
+
+</body>
+</html>
